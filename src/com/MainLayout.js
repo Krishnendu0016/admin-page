@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
 } from '@ant-design/icons';
 import {
   AiOutlineDashboard,
@@ -21,19 +21,19 @@ import { BiCategoryAlt } from "react-icons/bi";
 import { Layout, Menu, Button, theme } from 'antd';
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
-    const [collapsed, setCollapsed] = useState(false);
-    const {
-      token: { colorBgContainer },
-    } = theme.useToken();
-    const navigate = useNavigate();
-    return (
-        <Layout>
+  const [collapsed, setCollapsed] = useState(false);
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
+  const navigate = useNavigate();
+  return (
+    <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="demo-logo-vertical" />
         <div className="logo">
           <h2 className="text-white fs-5 text-center py-3 mb-0">
-            <span className="sm-logo">DC</span>
-            <span className="lg-logo">Dev Corner</span>
+            <span className="sm-logo">S</span>
+            <span className="lg-logo">Shopper</span>
           </h2>
         </div>
         <Menu
@@ -127,33 +127,6 @@ const MainLayout = () => {
               ],
             },
             {
-              key: "blogs",
-              icon: <FaBloggerB className="fs-4" />,
-              label: "Blogs",
-              children: [
-                {
-                  key: "blog",
-                  icon: <ImBlog className="fs-4" />,
-                  label: "Add Blog",
-                },
-                {
-                  key: "blog-list",
-                  icon: <FaBloggerB className="fs-4" />,
-                  label: "Blog List",
-                },
-                {
-                  key: "blog-category",
-                  icon: <ImBlog className="fs-4" />,
-                  label: "Add Blog Category",
-                },
-                {
-                  key: "blog-category-list",
-                  icon: <FaBloggerB className="fs-4" />,
-                  label: "Blog Category List",
-                },
-              ],
-            },
-            {
               key: "enquiries",
               icon: <FaClipboardList className="fs-4" />,
               label: "Enquiries",
@@ -161,7 +134,7 @@ const MainLayout = () => {
           ]}
         />
       </Sider>
-      
+
       <Layout className="site-layout">
         <Header
           className="d-flex justify-content-between ps-1 pe-5"
@@ -230,14 +203,14 @@ const MainLayout = () => {
           style={{
             margin: '24px 16px',
             padding: 24,
-            minHeight: 280, 
+            minHeight: 280,
           }}
         >
-          
+          <Outlet />
         </Content>
       </Layout>
     </Layout>
-    )
+  )
 }
 
 export default MainLayout

@@ -163,7 +163,7 @@ const MainLayout = () => {
                 <img
                   width={32}
                   height={32}
-                  src=""
+                  src="images/713947.jpg"
                   alt="image"
                 />
               </div>

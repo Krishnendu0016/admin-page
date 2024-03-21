@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-} from '@ant-design/icons';
+import React, { useState } from "react";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import {
   AiOutlineDashboard,
   AiOutlineShoppingCart,
   AiOutlineUser,
   AiOutlineBgColors,
 } from "react-icons/ai";
+import { RiCouponLine } from "react-icons/ri";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
-import { IoIosNotifications } from "react-icons/io";
 import { Outlet } from "react-router-dom";
 import { ImBlog } from "react-icons/im";
-import { RiCouponLine } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
+import { IoIosNotifications } from "react-icons/io";
 import { FaClipboardList, FaBloggerB } from "react-icons/fa";
 import { SiBrandfolder } from "react-icons/si";
 import { BiCategoryAlt } from "react-icons/bi";
-import { Layout, Menu, Button, theme } from 'antd';
+import { Layout, Menu, theme } from "antd";
+import { useNavigate } from "react-router-dom";
 const { Header, Sider, Content } = Layout;
 const MainLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -27,19 +26,18 @@ const MainLayout = () => {
   } = theme.useToken();
   const navigate = useNavigate();
   return (
-    <Layout>
+    <Layout /* onContextMenu={(e) => e.preventDefault()} */>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="demo-logo-vertical" />
         <div className="logo">
           <h2 className="text-white fs-5 text-center py-3 mb-0">
-            <span className="sm-logo">S</span>
-            <span className="lg-logo">Shopper</span>
+            <span className="sm-logo">DC</span>
+            <span className="lg-logo">Dev Corner</span>
           </h2>
         </div>
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={['']}
+          defaultSelectedKeys={[""]}
           onClick={({ key }) => {
             if (key == "signout") {
             } else {
@@ -48,9 +46,9 @@ const MainLayout = () => {
           }}
           items={[
             {
-              key: '',
+              key: "",
               icon: <AiOutlineDashboard className="fs-4" />,
-              label: 'Dashboard',
+              label: "Dashboard",
             },
             {
               key: "customers",
@@ -134,7 +132,6 @@ const MainLayout = () => {
           ]}
         />
       </Sider>
-
       <Layout className="site-layout">
         <Header
           className="d-flex justify-content-between ps-1 pe-5"
@@ -163,8 +160,8 @@ const MainLayout = () => {
                 <img
                   width={32}
                   height={32}
-                  src="images/713947.jpg"
-                  alt="image"
+                  src="https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg"
+                  alt=""
                 />
               </div>
               <div
@@ -173,8 +170,8 @@ const MainLayout = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <h5 className="mb-0">Team Ace</h5>
-                <p className="mb-0">2105206@gmail.com</p>
+                <h5 className="mb-0">Navdeep</h5>
+                <p className="mb-0">navdeepdahiya753@gmail.com</p>
               </div>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
@@ -201,16 +198,27 @@ const MainLayout = () => {
         </Header>
         <Content
           style={{
-            margin: '24px 16px',
+            margin: "24px 16px",
             padding: 24,
             minHeight: 280,
+            background: colorBgContainer,
           }}
         >
+          <ToastContainer
+            position="top-right"
+            autoClose={250}
+            hideProgressBar={false}
+            newestOnTop={true}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            theme="light"
+          />
           <Outlet />
         </Content>
       </Layout>
     </Layout>
-  )
-}
-
-export default MainLayout
+  );
+};
+export default MainLayout;

@@ -160,8 +160,8 @@ const MainLayout = () => {
                 <img
                   width={32}
                   height={32}
-                  src="https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg"
-                  alt=""
+                  src="https://scontent.fbbi2-1.fna.fbcdn.net/v/t39.30808-1/279076861_663568434931755_7223037279976053293_n.jpg?stp=dst-jpg_p160x160&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KQr7rIQ_lg8AX_tuuy1&_nc_ht=scontent.fbbi2-1.fna&oh=00_AfB_p0r2KcHFsnpmiq55fm5zcfkUTW2oNd4qiKDhmKVs8w&oe=660334A3"
+                  alt="profile photo"
                 />
               </div>
               <div
@@ -170,8 +170,8 @@ const MainLayout = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <h5 className="mb-0">Navdeep</h5>
-                <p className="mb-0">navdeepdahiya753@gmail.com</p>
+                <h5 className="mb-0">Krishnendu</h5>
+                <p className="mb-0">krishnendu@gmail.com</p>
               </div>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li>
